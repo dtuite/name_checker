@@ -1,5 +1,6 @@
 require "name_checker/version"
 
+require "name_checker/availability"
+
 module NameChecker
-  # Your code goes here...
 end

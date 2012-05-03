@@ -18,7 +18,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+availability = NameChecker.check("github", "twitter")
+availability.text
+#=> "github"
+availability.available?
+#=> false
+
+availability = NameChecker.check("availabledomain", "net")
+availability.text
+#=> "availabledomain.net"
+availability.available?
+#=> true
+```
 
 ## Contributing
 
