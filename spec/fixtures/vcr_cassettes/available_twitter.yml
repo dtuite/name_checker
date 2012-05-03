@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.twitter.com/1/users/show.json?screen_name=sdfjksdh
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      X-Ratelimit-Limit:
+      - '150'
+      X-Ratelimit-Remaining:
+      - '149'
+      X-Ratelimit-Reset:
+      - '1336091947'
+      X-Ratelimit-Class:
+      - api
+      Content-Type:
+      - application/json;charset=utf-8
+      Set-Cookie:
+      - guest_id="v1:133608834775783552";Expires=Sat, 3-May-14 23:39:07 GMT;Path=/;Domain=.twitter.com
+      - k=46.7.124.72.94eaf2b78dbfa869; path=/; expires=Thu, 10-May-2012 23:39:07
+        UTC; domain=.api.twitter.com; httponly
+      Last-Modified:
+      - Thu, 03 May 2012 23:39:07 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      X-Transaction:
+      - 8c6077f11d52dd2b
+      X-Frame-Options:
+      - SAMEORIGIN
+      Status:
+      - 404 Not Found
+      Date:
+      - Thu, 03 May 2012 23:39:07 GMT
+      Content-Length:
+      - '73'
+      Server:
+      - tfe
+    body:
+      encoding: US-ASCII
+      string: ! '{"request":"/1/users/show.json?screen_name=sdfjksdh","error":"Not
+        found"}'
+    http_version: 
+  recorded_at: Thu, 03 May 2012 23:39:07 GMT
+recorded_with: VCR 2.1.1
