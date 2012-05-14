@@ -1,12 +1,6 @@
 require "spec_helper"
 
-# unless defined?(Rails)
-#   class Rails; end
-# end
-
 describe NameChecker::TwitterChecker, "check" do
-  # before { Rails.stub(logger: stub(:warn => true)) }
-
   it "should return positive the name is available" do
     VCR.use_cassette("available_twitter") do
       availability = klass.check("sdfjksdh")

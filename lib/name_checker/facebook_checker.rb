@@ -1,0 +1,40 @@
+module NameChecker
+  class FacebookChecker
+    include HTTParty
+    include Logging
+    MIN_NAME_LENGTH = 5
+    base_uri "https://graph.facebook.com"
+
+    def self.check(name, options = {})
+      # just return false if the name is too short to be valid.
+      if name.length < MIN_NAME_LENGTH
+        return Availability.new(name, false)
+      end
+
+      res = get("/#{name}")
+      status = handle_response(res, name)
+      Availability.new(service_name, status)
+    end
+
+    def self.service_name
+      'facebook'
+    end
+
+  private
+
+    def self.log_warning(name, res)
+      warning = "#{service_name.upcase}_FAILURE: Handling #{name}. Response: #{res}"
+      Logging.logger.warn(warning)
+      # Nil return must be explicit because the logging will return true.
+      return nil
+    end
+
+    def self.handle_response(res, name)
+      case res.code
+      when 200 then false
+      when 404 then true
+      else log_warning(name, res)
+      end
+    end
+  end
+end
