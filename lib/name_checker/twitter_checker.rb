@@ -5,6 +5,7 @@
 module NameChecker
   class TwitterChecker
     include HTTParty
+    include Logging
     MAX_NAME_LENGTH = 16
     base_uri "http://api.twitter.com"
 
@@ -47,8 +48,7 @@ module NameChecker
 
     def self.log_warning(name, res)
       warning = "#{service_name.upcase}_FAILURE: Handling #{name}. Response: #{res}"
-      # TODO: Come up with a logging solution.
-      # Rails.logger.warn(warning)
+      Logging.logger.warn(warning)
       # Nil return must be explicit because the logging will return true.
       return nil
     end
@@ -56,8 +56,7 @@ module NameChecker
     def self.log_rate_limit(remaining)
       return nil if remaining.to_i > warning_limit
       warning = "RATELIMIT_WARNING: Service #{service_name}. Remaining requests: #{remaining}"
-      # TODO: Come up with a logging solution.
-      # Rails.logger.warn(warning)
+      Logging.logger.warn(warning)
       # Nil return must be explicit because the logging will return true.
       return nil
     end
