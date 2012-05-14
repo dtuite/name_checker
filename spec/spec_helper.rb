@@ -15,4 +15,6 @@ VCR.configure do |c|
   c.ignore_hosts '127.0.0.1', 'localhost'
 end
 
-NameChecker.configure
+NameChecker.configure do |config|
+  config.robo_whois_api_key = '0f2475d42fc8673bae183da9a6adbc28'
+end

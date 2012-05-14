@@ -6,6 +6,7 @@ require "name_checker/configuration"
 require "name_checker/availability"
 require "name_checker/twitter_checker"
 require "name_checker/facebook_checker"
+require "name_checker/robo_whois_checker"
 
 module NameChecker
 end

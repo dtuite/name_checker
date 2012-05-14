@@ -1,9 +1,9 @@
 module NameChecker
   class Configuration
-    attr_accessor :robowhois_key, :log_level
+    attr_accessor :robo_whois_api_key, :log_level
 
     def initialize
-      self.robowhois_key = nil
+      self.robo_whois_api_key = nil
       self.log_level = 'info'
     end
   end
@@ -14,11 +14,11 @@ module NameChecker
 
   def self.configure
     self.configuration ||= Configuration.new
-    yeild(configuration) if block_given?
+    yield(configuration) if block_given?
   end
 end
 
 # This can now be used under config/initializers/name_checker.rb
 # NameChecker.configure do |config|
-#   confg.robowhois_key = 'dfskljkf'
+#   config.robo_whois_api_key = 'dfskljkf'
 # end
