@@ -1,9 +1,10 @@
 module NameChecker
-  class NoAPIKeyError < ArgumentError; end
-
   class RoboWhoisChecker
+    class NoAPIKeyError < ArgumentError; end
+
     include HTTParty
     include Logging
+
     base_uri 'http://api.robowhois.com'
     @service_name = :robo_whois
 
