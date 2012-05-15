@@ -3,6 +3,7 @@ module NameChecker
     include HTTParty
     include Logging
     base_uri 'http://api.robowhois.com'
+    @service_name = :robo_whois
 
     def self.check(host, options={})
       options.merge!(basic_auth: auth_options)
@@ -10,7 +11,7 @@ module NameChecker
       # NOTE: RoboWhois will return 404 if I append ".json".
       res = get("/whois/#{host}/availability", options)
       status = handle_response(res, host)
-      Availability.new(service_name, status)
+      Availability.new(@service_name.to_s, status)
     end
 
     # NOTE: We can't use the 'basic_auth' method because the
@@ -20,17 +21,13 @@ module NameChecker
         username: NameChecker.configuration.robo_whois_api_key }
     end
 
-    def self.service_name
-      'net'
-    end
-
     def self.warning_limit
       50
     end
 
   private
     def self.log_warning(name, res)
-      warning = "#{service_name.upcase}_FAILURE: Handling #{name}. Response: #{res}"
+      warning = "#{@service_name.upcase}_FAILURE: Handling #{name}. Response: #{res}"
       Logging.logger.warn(warning)
       # Nil return must be explicit because the logging will return true.
       return nil
@@ -50,7 +47,7 @@ module NameChecker
         return nil
       end
 
-      warning = "RATELIMIT_WARNING: Service #{service_name}. 
+      warning = "RATELIMIT_WARNING: Service #{@service_name}. 
 Remaining credits: #{remaining_count}"
       Logging.logger.warn(warning)
       # Nil return must be explicit because the logging will return true.

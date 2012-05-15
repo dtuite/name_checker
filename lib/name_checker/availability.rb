@@ -3,7 +3,7 @@ module NameChecker
     attr_reader :status, :service
 
     def initialize(service, status_input)
-      @service = service
+      @service = service.to_s
       @status = parse_status(status_input)
     end
 
