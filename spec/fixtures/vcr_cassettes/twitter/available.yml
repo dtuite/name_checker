@@ -15,15 +15,15 @@ http_interactions:
       X-Ratelimit-Limit:
       - '150'
       X-Ratelimit-Remaining:
-      - '148'
+      - '136'
       X-Ratelimit-Reset:
-      - '1337085665'
+      - '1337090175'
       X-Ratelimit-Class:
       - api
       Content-Type:
       - application/json;charset=utf-8
       Last-Modified:
-      - Tue, 15 May 2012 12:09:22 GMT
+      - Tue, 15 May 2012 13:47:05 GMT
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Pragma:
@@ -31,17 +31,17 @@ http_interactions:
       Cache-Control:
       - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
       Set-Cookie:
-      - guest_id="v1:133708376286971959";Expires=Thu, 15-May-14 12:09:22 GMT;Path=/;Domain=.twitter.com
-      - k=46.7.124.72.8fb45c5990ec725f; path=/; expires=Tue, 22-May-2012 12:09:22
+      - guest_id="v1:133708962543023283";Expires=Thu, 15-May-14 13:47:05 GMT;Path=/;Domain=.twitter.com
+      - k=46.7.124.72.28b18ebf6ff3bd9e; path=/; expires=Tue, 22-May-2012 13:47:05
         UTC; domain=.api.twitter.com; httponly
       Status:
       - 404 Not Found
       X-Transaction:
-      - a7d4dfb8a70a3c8f
+      - 010ae87ef75a734f
       X-Frame-Options:
       - SAMEORIGIN
       Date:
-      - Tue, 15 May 2012 12:09:22 GMT
+      - Tue, 15 May 2012 13:47:05 GMT
       Content-Length:
       - '76'
       Server:
@@ -51,5 +51,5 @@ http_interactions:
       string: ! '{"request":"\/1\/users\/show.json?screen_name=sdfjksdh","error":"Not
         found"}'
     http_version: 
-  recorded_at: Tue, 15 May 2012 12:09:22 GMT
+  recorded_at: Tue, 15 May 2012 13:47:05 GMT
 recorded_with: VCR 2.1.1

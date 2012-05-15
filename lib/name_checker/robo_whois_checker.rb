@@ -1,4 +1,6 @@
 module NameChecker
+  class NoAPIKeyError < ArgumentError; end
+
   class RoboWhoisChecker
     include HTTParty
     include Logging
@@ -17,6 +19,8 @@ module NameChecker
     # NOTE: We can't use the 'basic_auth' method because the
     # configuration object is not available at the class level.
     def self.auth_options
+      # raise NoAPIKeyError unless NameChecker.configuration.robo_whois_api_key
+
       { password: 'X',
         username: NameChecker.configuration.robo_whois_api_key }
     end

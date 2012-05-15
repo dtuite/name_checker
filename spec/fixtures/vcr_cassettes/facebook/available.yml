@@ -28,9 +28,9 @@ http_interactions:
       X-Fb-Rev:
       - '557325'
       X-Fb-Debug:
-      - iBBAaaaPDhIyi+H7208ZMqvzZf/UeRipW5yl3M7bOvs=
+      - T9Tc2QCrwrA2kdzKn80LrtZB9z2T9UDKjfYC0Tm2uDk=
       Date:
-      - Tue, 15 May 2012 12:09:20 GMT
+      - Tue, 15 May 2012 13:46:59 GMT
       Content-Length:
       - '122'
       Connection:
@@ -40,5 +40,5 @@ http_interactions:
       string: ! '{"error":{"message":"(#803) Some of the aliases you requested do
         not exist: sdfjksdh","type":"OAuthException","code":803}}'
     http_version: 
-  recorded_at: Tue, 15 May 2012 12:09:20 GMT
+  recorded_at: Tue, 15 May 2012 13:46:59 GMT
 recorded_with: VCR 2.1.1

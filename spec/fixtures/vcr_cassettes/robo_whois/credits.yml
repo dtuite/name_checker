@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://0f2475d42fc8673bae183da9a6adbc28:X@api.robowhois.com/whois/apple.ly/availability
+    uri: http://ROBO_WHOIS_API_KEY:X@api.robowhois.com/whois/apple.ly/availability
     body:
       encoding: US-ASCII
       string: ''
@@ -25,24 +25,24 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Etag:
-      - ! '"e95068abd1ec31db4611c52a74d4911c"'
+      - ! '"e30cdc1fa304894465be292797230050"'
       Cache-Control:
       - must-revalidate, private, max-age=0
       X-Request-Id:
-      - 018d745d8a82a8b00b48b5c4b13986f5
+      - 5eee6e3187e762e21c7c8e87bd7e794a
       X-Runtime:
-      - '1.829415'
+      - '0.426439'
       X-Creditlimit-Remaining:
       - '49'
       Date:
-      - Tue, 15 May 2012 12:15:10 GMT
+      - Tue, 15 May 2012 13:47:03 GMT
       X-Rack-Cache:
       - miss
       Server:
       - nginx/1.1.14 + Phusion Passenger 3.0.11 (mod_rails/mod_rack)
     body:
       encoding: US-ASCII
-      string: ! '{"response":{"daystamp":"2012-05-15","available":false,"registered":true}}'
+      string: ! '{"response":{"daystamp":"2012-05-15T00:00:00Z","available":false,"registered":true}}'
     http_version: 
-  recorded_at: Tue, 15 May 2012 12:15:10 GMT
+  recorded_at: Tue, 15 May 2012 13:47:03 GMT
 recorded_with: VCR 2.1.1

@@ -8,6 +8,8 @@ describe NameChecker::RoboWhoisChecker, "check" do
     "#{fixtures_dir}/#{name}"
   end
 
+  it "should raise an error if there is no api key"
+
   it "should tell if the domain is unavailable" do
     VCR.use_cassette(fixture_path("unavailable")) do
       availability = subject.check("apple.com")
