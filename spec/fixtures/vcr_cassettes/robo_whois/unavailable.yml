@@ -25,24 +25,24 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Etag:
-      - ! '"3bd3be30b1551dd6fe7cda72f9736404"'
+      - ! '"e95068abd1ec31db4611c52a74d4911c"'
       Cache-Control:
       - must-revalidate, private, max-age=0
       X-Request-Id:
-      - 6a3363298c35c1151f905b645c5a867e
+      - 94f16afb76c03eb87fe6df8e1f1a9807
       X-Runtime:
-      - '0.477306'
+      - '1.464236'
       X-Creditlimit-Remaining:
-      - '684'
+      - '682'
       Date:
-      - Mon, 14 May 2012 13:09:00 GMT
+      - Tue, 15 May 2012 11:58:44 GMT
       X-Rack-Cache:
       - miss
       Server:
       - nginx/1.1.14 + Phusion Passenger 3.0.11 (mod_rails/mod_rack)
     body:
       encoding: US-ASCII
-      string: ! '{"response":{"daystamp":"2012-05-14","available":false,"registered":true}}'
+      string: ! '{"response":{"daystamp":"2012-05-15","available":false,"registered":true}}'
     http_version: 
-  recorded_at: Mon, 14 May 2012 13:09:00 GMT
+  recorded_at: Tue, 15 May 2012 11:58:44 GMT
 recorded_with: VCR 2.1.1

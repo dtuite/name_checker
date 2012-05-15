@@ -1,9 +1,14 @@
 require "spec_helper"
 
-
 describe NameChecker::RoboWhoisChecker, "check" do
+  let(:fixtures_dir) { "robo_whois" }
+
+  def fixture_path(name)
+    "#{fixtures_dir}/#{name}"
+  end
+
   it "should tell if the domain is unavailable" do
-    VCR.use_cassette("unavailable_domain") do
+    VCR.use_cassette(fixture_path("unavailable")) do
       availability = NameChecker::RoboWhoisChecker.check("apple.com")
       availability.should be_unavailable
     end
@@ -11,7 +16,7 @@ describe NameChecker::RoboWhoisChecker, "check" do
 
   xit "should tell if the domain is available" do
     available_domain = "fwekjfkewfhwefhhfjcjksdjklka.com"
-    VCR.use_cassette("available_domain") do
+    VCR.use_cassette("robo_whois/available") do
       availability = NameChecker::RoboWhoisChecker.check(available_domain)
       availability.should be_available
     end

@@ -9,4 +9,11 @@ require "name_checker/facebook_checker"
 require "name_checker/robo_whois_checker"
 
 module NameChecker
+  def configuration
+    @configuration ||= Configuration.new
+  end
+
+  def configure
+    yield(configuration)
+  end
 end
