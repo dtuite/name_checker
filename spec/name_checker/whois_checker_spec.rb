@@ -1,6 +1,7 @@
 require "spec_helper"
 
 describe NameChecker::WhoisChecker do
+  subject { NameChecker::WhoisChecker }
 
   # NOTE: VCR can't catch Whois reqquests because they
   # are not HTTP requests.
