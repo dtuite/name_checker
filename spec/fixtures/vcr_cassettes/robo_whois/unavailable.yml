@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ROBO_WHOIS_API_KEY:X@api.robowhois.com/whois/apple.com/availability
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.11
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"e30cdc1fa304894465be292797230050"'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      X-Request-Id:
+      - a27ba8dbcd390e69b238a5956ac913f0
+      X-Runtime:
+      - '0.531093'
+      X-Creditlimit-Remaining:
+      - '673'
+      Date:
+      - Tue, 15 May 2012 13:47:02 GMT
+      X-Rack-Cache:
+      - miss
+      Server:
+      - nginx/1.1.14 + Phusion Passenger 3.0.11 (mod_rails/mod_rack)
+    body:
+      encoding: US-ASCII
+      string: ! '{"response":{"daystamp":"2012-05-15T00:00:00Z","available":false,"registered":true}}'
+    http_version: 
+  recorded_at: Tue, 15 May 2012 13:47:02 GMT
+recorded_with: VCR 2.1.1

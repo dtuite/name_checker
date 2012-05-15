@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.twitter.com/1/users/show.json?screen_name=apple
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      X-Ratelimit-Limit:
+      - '150'
+      X-Ratelimit-Remaining:
+      - '133'
+      X-Ratelimit-Reset:
+      - '1337090175'
+      X-Ratelimit-Class:
+      - api
+      Content-Type:
+      - application/json;charset=utf-8
+      Last-Modified:
+      - Tue, 15 May 2012 13:47:06 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Set-Cookie:
+      - guest_id="v1:133708962659503145";Expires=Thu, 15-May-14 13:47:06 GMT;Path=/;Domain=.twitter.com
+      - k=46.7.124.72.f80967d2a5dc6e80; path=/; expires=Tue, 22-May-2012 13:47:06
+        UTC; domain=.api.twitter.com; httponly
+      Status:
+      - 403 Forbidden
+      X-Transaction:
+      - bf33bb2e792499a4
+      X-Frame-Options:
+      - SAMEORIGIN
+      Date:
+      - Tue, 15 May 2012 13:47:06 GMT
+      Content-Length:
+      - '87'
+      Server:
+      - tfe
+    body:
+      encoding: US-ASCII
+      string: ! '{"request":"\/1\/users\/show.json?screen_name=apple","error":"User
+        has been suspended"}'
+    http_version: 
+  recorded_at: Tue, 15 May 2012 13:47:06 GMT
+recorded_with: VCR 2.1.1

@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/davidtuite
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - text/javascript; charset=UTF-8
+      Etag:
+      - ! '"7aac069a894f488e0ab622bad887af759b1a6a4d"'
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      X-Fb-Rev:
+      - '557325'
+      X-Fb-Debug:
+      - XkOsmXV0sgwfPwI3yYdKP9IN4DpCpqqJuNREBKssYRI=
+      Date:
+      - Tue, 15 May 2012 13:47:00 GMT
+      Content-Length:
+      - '185'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"37300597","name":"David Tuite","first_name":"David","last_name":"Tuite","link":"http:\/\/www.facebook.com\/david.tuite","username":"david.tuite","gender":"male","locale":"en_GB"}'
+    http_version: 
+  recorded_at: Tue, 15 May 2012 13:47:00 GMT
+recorded_with: VCR 2.1.1
