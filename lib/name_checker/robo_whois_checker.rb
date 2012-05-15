@@ -5,14 +5,19 @@ module NameChecker
     base_uri 'http://api.robowhois.com'
 
     def self.check(host, options={})
-      options.merge!(basic_auth: { 
-        password: 'X',
-        username: NameChecker.configuration.robo_whois_api_key })
+      options.merge!(basic_auth: auth_options)
 
       # NOTE: RoboWhois will return 404 if I append ".json".
       res = get("/whois/#{host}/availability", options)
       status = handle_response(res, host)
       Availability.new(service_name, status)
+    end
+
+    # NOTE: We can't use the 'basic_auth' method because the
+    # configuration object is not available at the class level.
+    def self.auth_options
+      { password: 'X',
+        username: NameChecker.configuration.robo_whois_api_key }
     end
 
     def self.service_name

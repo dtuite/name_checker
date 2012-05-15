@@ -2,54 +2,54 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.twitter.com/1/users/show.json?screen_name=sdfjksdh
+    uri: http://api.twitter.com/1/users/show.json?screen_name=apple
     body:
       encoding: US-ASCII
       string: ''
     headers: {}
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 403
+      message: Forbidden
     headers:
       X-Ratelimit-Limit:
       - '150'
       X-Ratelimit-Remaining:
-      - '149'
+      - '145'
       X-Ratelimit-Reset:
-      - '1336091947'
+      - '1337085665'
       X-Ratelimit-Class:
       - api
       Content-Type:
       - application/json;charset=utf-8
-      Set-Cookie:
-      - guest_id="v1:133608834775783552";Expires=Sat, 3-May-14 23:39:07 GMT;Path=/;Domain=.twitter.com
-      - k=46.7.124.72.94eaf2b78dbfa869; path=/; expires=Thu, 10-May-2012 23:39:07
-        UTC; domain=.api.twitter.com; httponly
       Last-Modified:
-      - Thu, 03 May 2012 23:39:07 GMT
+      - Tue, 15 May 2012 12:09:24 GMT
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Pragma:
       - no-cache
       Cache-Control:
       - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Set-Cookie:
+      - guest_id="v1:133708376402767892";Expires=Thu, 15-May-14 12:09:24 GMT;Path=/;Domain=.twitter.com
+      - k=46.7.124.72.fc1cfca104e0875f; path=/; expires=Tue, 22-May-2012 12:09:24
+        UTC; domain=.api.twitter.com; httponly
+      Status:
+      - 403 Forbidden
       X-Transaction:
-      - 8c6077f11d52dd2b
+      - ebb9e218f26da8d3
       X-Frame-Options:
       - SAMEORIGIN
-      Status:
-      - 404 Not Found
       Date:
-      - Thu, 03 May 2012 23:39:07 GMT
+      - Tue, 15 May 2012 12:09:24 GMT
       Content-Length:
-      - '73'
+      - '87'
       Server:
       - tfe
     body:
       encoding: US-ASCII
-      string: ! '{"request":"/1/users/show.json?screen_name=sdfjksdh","error":"Not
-        found"}'
+      string: ! '{"request":"\/1\/users\/show.json?screen_name=apple","error":"User
+        has been suspended"}'
     http_version: 
-  recorded_at: Thu, 03 May 2012 23:39:07 GMT
+  recorded_at: Tue, 15 May 2012 12:09:24 GMT
 recorded_with: VCR 2.1.1

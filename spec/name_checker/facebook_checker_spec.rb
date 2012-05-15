@@ -1,29 +1,35 @@
 require "spec_helper"
 
 describe NameChecker::FacebookChecker, "check" do
+  let(:fixtures_dir) { "facebook" }
+
+  def fixture_path(name)
+    "#{fixtures_dir}/#{name}"
+  end
+
   it "should return negative if the name is too short" do
-    VCR.use_cassette("facebook/too_short") do
+    VCR.use_cassette(fixture_path("short")) do
       availability = NameChecker::FacebookChecker.check("jsda")
       availability.should be_unavailable
     end
   end
 
   it "should return positive the name is available" do
-    VCR.use_cassette("available_facebook") do
+    VCR.use_cassette(fixture_path("available")) do
       availability = NameChecker::FacebookChecker.check("sdfjksdh")
       availability.should be_available
     end
   end
 
   it "should return negtive if the name is taken" do
-    VCR.use_cassette("unavailable_facebook") do
+    VCR.use_cassette(fixture_path("unavailable")) do
       availability = NameChecker::FacebookChecker.check("davidtuite")
       availability.should be_unavailable
     end
   end
 
   it "should non choke on weird chars" do
-    VCR.use_cassette("weird_chars_facebook") do
+    VCR.use_cassette(fixture_path("weird_chars")) do
       availability = NameChecker::FacebookChecker.check("rememberly")
       availability.should be_unavailable
     end

@@ -14,23 +14,23 @@ describe NameChecker::RoboWhoisChecker, "check" do
     end
   end
 
-  xit "should tell if the domain is available" do
+  it "should tell if the domain is available" do
     available_domain = "fwekjfkewfhwefhhfjcjksdjklka.com"
-    VCR.use_cassette("robo_whois/available") do
+    VCR.use_cassette(fixture_path("available")) do
       availability = NameChecker::RoboWhoisChecker.check(available_domain)
       availability.should be_available
     end
   end
 
-  xit "should log if the remaining credits are below 50" do
-    VCR.use_cassette("remaining_credits") do
+  it "should log if the remaining credits are below 50" do
+    VCR.use_cassette(fixture_path("credits")) do
       Logging.logger.should_receive(:warn)
       availability = NameChecker::RoboWhoisChecker.check("apple.ly")
     end
   end
 
-  xit "should not log if the remaining credits are above 50" do
-    VCR.use_cassette("unavailable_domain") do
+  it "should not log if the remaining credits are above 50" do
+    VCR.use_cassette(fixture_path("unavailable")) do
       Logging.logger.should_not_receive(:warn)
       availability = NameChecker::RoboWhoisChecker.check("apple.com")
     end
@@ -42,12 +42,12 @@ describe NameChecker::RoboWhoisChecker, "check" do
     let(:response) { stub(headers: {}, code: 500) }
     before { NameChecker::RoboWhoisChecker.stub(:get) { response } }
 
-    xit "should log" do
+    it "should log" do
       Logging.logger.should_receive(:warn)
       NameChecker::RoboWhoisChecker.check(host)
     end
 
-    xit "should return 'unknown' availability" do
+    it "should return 'unknown' availability" do
       availability = NameChecker::RoboWhoisChecker.check(host)
       availability.should be_unknown
     end

@@ -25,11 +25,11 @@ http_interactions:
       Pragma:
       - no-cache
       X-Fb-Rev:
-      - '555779'
+      - '557325'
       X-Fb-Debug:
-      - q/SLv0x35ra42WKxUwZ0UGu6hrXack6gFSHnKyCmWms=
+      - tV15ZVd9xFX5cOUOsjxlhmx/ZXt688XMF7DgE1EluW4=
       Date:
-      - Mon, 14 May 2012 13:01:30 GMT
+      - Tue, 15 May 2012 12:09:22 GMT
       Content-Length:
       - '205'
       Connection:
@@ -38,5 +38,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"id":"100000185260051","name":"\u5289\u51a0\u986f","first_name":"\u51a0\u986f","last_name":"\u5289","link":"http:\/\/www.facebook.com\/rememberly","username":"rememberly","gender":"male","locale":"zh_TW"}'
     http_version: 
-  recorded_at: Mon, 14 May 2012 13:01:30 GMT
+  recorded_at: Tue, 15 May 2012 12:09:22 GMT
 recorded_with: VCR 2.1.1
