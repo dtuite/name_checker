@@ -13,7 +13,7 @@ module NameChecker
       # NOTE: RoboWhois will return 404 if I append ".json".
       res = get("/whois/#{host}/availability", options)
       status = handle_response(res, host)
-      Availability.new(@service_name.to_s, status)
+      Availability.new(@service_name, status)
     end
 
     # NOTE: We can't use the 'basic_auth' method because the

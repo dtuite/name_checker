@@ -14,6 +14,7 @@ describe NameChecker::RoboWhoisChecker, "check" do
     VCR.use_cassette(fixture_path("unavailable")) do
       availability = subject.check("apple.com")
       availability.should be_unavailable
+      availability.service.should == 'robo_whois'
     end
   end
 

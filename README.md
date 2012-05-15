@@ -35,15 +35,16 @@ Or install it yourself as:
 
 ## Checking Hosts
 
-Currently this happens through the [RoboWhois API](http://www.robowhois.com/).
-You will need an api key gor their service. See the configuration section of
-the readme to see how to use your API key.
+Domain availability checking can occur either with the [Whois Gem](http://bit.ly/KYquaW)
+(default) or via the [RoboWhois API](http://bit.ly/KYqveX).
 
-## Configuration
+To use the RoboWhois service, simply configure NameChecker with an API key.
 
     NameChecker.config do |config|
       config.robo_whois_api_key = 'jdsfldsjflkj'
     end
+
+All domain availability requests will then route through RoboWhois.
 
 ## Contributing
 
@@ -56,7 +57,10 @@ the readme to see how to use your API key.
 ## Running the Specs
 
 You will need to add a RoboWhois Api Key to `spec/spec_helper.rb` to be
-able to run the specs. Set it up like this:
+able to run all of the specs. Set it up like this:
 
     # Add your robo whois api key here:
     ROBO_WHOIS_API_KEY = 'YOUR_KEY'
+
+You can still run the specs without an API key. However, all specs related
+to the RoboWhoisChecker will fail.
