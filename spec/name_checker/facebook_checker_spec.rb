@@ -16,6 +16,14 @@ describe NameChecker::FacebookChecker, "check" do
     end
   end
 
+  it "should return negative if facebook returns 'false'" do
+    VCR.use_cassette(fixture_path("false")) do
+      availability = subject.check("thirdone")
+      availability.should be_unavailable
+      availability.service.should == "facebook"
+    end
+  end
+
   it "should return positive the name is available" do
     VCR.use_cassette(fixture_path("available")) do
       availability = subject.check("sdfjksdh")
