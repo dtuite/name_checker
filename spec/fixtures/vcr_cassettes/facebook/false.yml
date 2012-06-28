@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/thirdone
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Type:
+      - text/javascript; charset=UTF-8
+      Etag:
+      - ! '"7cb6efb98ba5972a9b5090dc2e517fe14d12cb04"'
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      X-Fb-Rev:
+      - '581908'
+      X-Fb-Debug:
+      - TlKhe58LBPKAzFy6YD8wWR/U5Qs1lKEq4aL10EdLrCo=
+      Date:
+      - Thu, 28 Jun 2012 18:36:30 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5'
+    body:
+      encoding: US-ASCII
+      string: 'false'
+    http_version: 
+  recorded_at: Thu, 28 Jun 2012 18:36:30 GMT
+recorded_with: VCR 2.2.0
