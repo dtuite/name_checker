@@ -6,6 +6,7 @@ unless defined?(SPEC_ROOT)
 end
 
 # Add your robo whois api key here if you have one:
+# Otherwise the specs will run using the Ruby-Whois gem.
 ROBO_WHOIS_API_KEY = nil
 
 # Requires supporting ruby files with custom matchers and macros, etc,
