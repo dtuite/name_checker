@@ -5,8 +5,8 @@ unless defined?(SPEC_ROOT)
   SPEC_ROOT = File.expand_path("../", __FILE__)
 end
 
-# Add your robo whois api key here if you have one:
-# Otherwise the specs will run using the Ruby-Whois gem.
+# A RoboWhois API Key must b supplied in order to regenerate
+# VCR casettes. 
 ROBO_WHOIS_API_KEY = nil
 
 # Requires supporting ruby files with custom matchers and macros, etc,
@@ -24,5 +24,5 @@ VCR.configure do |c|
 end
 
 NameChecker.configure do |config|
-  config.robo_whois_api_key = ROBO_WHOIS_API_KEY if ROBO_WHOIS_API_KEY
+  config.robo_whois_api_key = ROBO_WHOIS_API_KEY || 'ROBO_WHOIS_API_KEY'
 end
