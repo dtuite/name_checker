@@ -1,7 +1,9 @@
 # NameChecker
 
 NameChecker makes it easy to check the availability of a word across various
-top-level domains and social networks.
+top-level domains and social networks. 
+
+It powers checking at [Namedar.com](http://namedar.com).
 
 ## Installation
 
@@ -17,11 +19,15 @@ Or install it yourself as:
 
     $ gem install name_checker
 
+## API
+
+    availability = NameChecker.check(<WORD>, <SERVICE>)
+
 ## Usage
 
-    availability = NameChecker.check("github", "twitter")
+    availability = NameChecker.check("banana", "twitter")
     availability.text
-    #=> "github"
+    #=> "banana"
     availability.available?
     #=> false
 
@@ -33,7 +39,16 @@ Or install it yourself as:
     availability.available?
     #=> true
 
-## Checking Hosts
+## Supported Social Networks
+
+ - Facebook
+ - Twitter
+
+## Supported Top-level Domains
+
+ See the documentation of the [Ruby-Whois Gem](http://www.ruby-whois.org/).
+
+## Checking Domain Availability
 
 Domain availability checking can occur either with the [Whois Gem](http://bit.ly/KYquaW)
 (default) or via the [RoboWhois API](http://bit.ly/KYqveX).

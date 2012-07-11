@@ -7,9 +7,9 @@ describe NameChecker::NetChecker do
     let(:host_name) { "apple" }
     let(:tld) { ".com" }
 
-    # NOTE: This test assumes there is a ROBO_WHOIS_API_KEY
-    # set in spec/shec_helper.rb
     it "should hit the RoboWhoisChecker if there is an api key" do
+      NameChecker.configuration.stub(:robo_whois_api_key) { "123" }
+
       NameChecker::RoboWhoisChecker.should_receive(:check)
         .with(host_name + tld)
       subject.check(host_name, tld)
