@@ -3,7 +3,9 @@
 NameChecker makes it easy to check the availability of a word across various
 top-level domains and social networks. 
 
-It powers checking at [Namedar.com](http://namedar.com).
+It powers checking at [namedar.com](http://namedar.com).
+
+ - [RubyDocs](http://www.rubydoc.info/github/dtuite/name_checker/master/frames)
 
 ## Installation
 
