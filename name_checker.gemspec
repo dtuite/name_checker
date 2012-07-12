@@ -18,7 +18,9 @@ Gem::Specification.new do |gem|
   gem.version       = NameChecker::VERSION
 
   gem.add_development_dependency "rspec"
+  gem.add_development_dependency "webmock"
   gem.add_development_dependency "vcr"
+  gem.add_development_dependency "rake"
 
   gem.add_dependency "httparty"
   gem.add_dependency "whois"
