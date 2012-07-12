@@ -1,4 +1,9 @@
 module NameChecker
+  # Container class to represent the availability of a word on
+  # a specific service.
+  #
+  #   Availability.new('twitter', false)
+  #
   class Availability
     attr_reader :status, :service
 
