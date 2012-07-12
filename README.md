@@ -1,4 +1,4 @@
-# NameChecker
+# NameChecker [![Build Status](https://secure.travis-ci.org/dtuite/name_checker.png?branch=master)](http://travis-ci.org/dtuite/name_checker)
 
 NameChecker makes it easy to check the availability of a word across various
 top-level domains and social networks. 
