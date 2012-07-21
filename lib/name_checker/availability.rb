@@ -1,3 +1,5 @@
+require "json"
+
 module NameChecker
   # Container class to represent the availability of a word on
   # a specific service.
@@ -26,6 +28,14 @@ module NameChecker
     
     def unknown?
       status == "unknown"
+    end
+
+    def to_hash
+      { service: service, status: status }
+    end
+
+    def to_json
+      to_hash.to_json
     end
 
     def status=(status_input)
