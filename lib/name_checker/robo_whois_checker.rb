@@ -15,6 +15,8 @@ module NameChecker
       res = get("/whois/#{host}/availability", options)
       status = handle_response(res, host)
       Availability.new(@service_name, status)
+    rescue
+      Availability.new(@service_name, 'unknown')
     end
 
     # NOTE: We can't use the 'basic_auth' method because the
