@@ -7,7 +7,7 @@ module NameChecker
       # INFO: http://bit.ly/KYpzaj
       res = Whois.available?(host)
       Availability.new(@service_name, res)
-    rescue Timeout::Error
+    rescue Timeout::Error, Whois::Error
       Availability.new(@service_name, 'unknown')
     end
   end

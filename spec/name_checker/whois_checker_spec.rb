@@ -22,4 +22,16 @@ describe NameChecker::WhoisChecker do
     availability = subject.check("apple.com")
     availability.should be_unknown
   end
+
+  it "should resque timeout errors" do
+    Whois.stub(:available?).and_raise(Timeout::Error)
+    availability = subject.check("apple.ly")
+    availability.should be_unknown
+  end
+
+  it "should rescue whois errors" do
+    Whois.stub(:available?).and_raise(Whois::ConnectionError)
+    availability = subject.check("apple.ly")
+    availability.should be_unknown
+  end
 end
