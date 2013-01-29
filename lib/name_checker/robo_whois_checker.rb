@@ -6,12 +6,12 @@ module NameChecker
     include Logging
 
     base_uri 'http://api.robowhois.com/v1'
+    format :json
     @service_name = :robo_whois
 
     def self.check(host, options={})
       options.merge!(basic_auth: auth_options)
 
-      # NOTE: RoboWhois will return 404 if I append ".json".
       res = get("/availability/#{host}", options)
       status = handle_response(res, host)
       Availability.new(@service_name, status)
