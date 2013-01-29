@@ -5,7 +5,7 @@ module NameChecker
     include HTTParty
     include Logging
 
-    base_uri 'http://api.robowhois.com'
+    base_uri 'http://api.robowhois.com/v1'
     @service_name = :robo_whois
 
     def self.check(host, options={})

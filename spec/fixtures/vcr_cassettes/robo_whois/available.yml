@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://ROBO_WHOIS_API_KEY:X@api.robowhois.com/whois/fwekjfkewfhwefhhfjcjksdjklka.com/availability
+    uri: http://<ROBO_WHOIS_API_KEY>:X@api.robowhois.com/v1/whois/fwekjfkewfhwefhhfjcjksdjklka.com/availability
     body:
       encoding: US-ASCII
       string: ''
@@ -25,24 +25,24 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Etag:
-      - ! '"7a94f7d5ee93f606f2d20803e757d8b8"'
+      - ! '"c3e20f8606a63270d008e5291ae090a4"'
       Cache-Control:
       - must-revalidate, private, max-age=0
       X-Request-Id:
-      - 442e590044ab45247f17538c2f95065c
+      - 5ba3cdf16e323b21502b11ffe6388398
       X-Runtime:
-      - '0.369936'
+      - '1.333029'
       X-Creditlimit-Remaining:
-      - '672'
+      - '498'
       Date:
-      - Tue, 15 May 2012 13:47:03 GMT
+      - Tue, 29 Jan 2013 11:35:20 GMT
       X-Rack-Cache:
       - miss
       Server:
       - nginx/1.1.14 + Phusion Passenger 3.0.11 (mod_rails/mod_rack)
     body:
       encoding: US-ASCII
-      string: ! '{"response":{"daystamp":"2012-05-15T00:00:00Z","available":true,"registered":false}}'
+      string: ! '{"response":{"daystamp":"2013-01-29","available":true,"registered":false}}'
     http_version: 
-  recorded_at: Tue, 15 May 2012 13:47:03 GMT
-recorded_with: VCR 2.1.1
+  recorded_at: Tue, 29 Jan 2013 11:35:20 GMT
+recorded_with: VCR 2.4.0
