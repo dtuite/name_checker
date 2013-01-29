@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://<ROBO_WHOIS_API_KEY>:X@api.robowhois.com/v1/whois/apple.ly/availability
+    uri: http://<ROBO_WHOIS_API_KEY>:X@api.robowhois.com/v1/availability/apple.ly
     body:
       encoding: US-ASCII
       string: ''
