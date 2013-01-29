@@ -12,7 +12,7 @@ module NameChecker
       options.merge!(basic_auth: auth_options)
 
       # NOTE: RoboWhois will return 404 if I append ".json".
-      res = get("/whois/#{host}/availability", options)
+      res = get("/availability/#{host}", options)
       status = handle_response(res, host)
       Availability.new(@service_name, status)
     rescue
