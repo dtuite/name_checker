@@ -5,9 +5,9 @@ module Logging
     Logging.logger
   end
 
-  def self.logger
+  def self.logger(log_to = STDOUT)
     unless @logger
-      @logger = Logger.new(STDOUT)
+      @logger = Logger.new(log_to)
       @logger.level = Logging.infer_level
     end
     @logger

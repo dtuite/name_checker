@@ -23,6 +23,9 @@ VCR.configure do |c|
   end
 end
 
+# Suppress warnings such as rate limit warnings when running specs.
+Logging.logger(nil)
+
 NameChecker.configure do |config|
   config.robo_whois_api_key = ROBO_WHOIS_API_KEY || 'ROBO_WHOIS_API_KEY'
 end

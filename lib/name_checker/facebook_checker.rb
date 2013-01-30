@@ -13,6 +13,7 @@ module NameChecker
       end
 
       res = get("/#{name}")
+
     # So Facebook is bolloxed and sends back just the word 'false'
     # as the (invalid) json for certain queries. This causes a
     # MultiJson::DecodeError inside HTTParty which we need to catch.
